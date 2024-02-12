@@ -49,13 +49,13 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ### Unauthorized
 ``` json
-    "success": False, 
+    "success": "False", 
     "error": 401, 
     "message": "unauthorised"
 ```
 ### Permission not found
 ``` json
-    "success": False, 
+    "success": "False", 
     "error": 403, 
     "message": "permission not found"
 ```
