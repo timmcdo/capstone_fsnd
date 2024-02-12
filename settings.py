@@ -1,0 +1,20 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
+DB_NAME = os.environ.get("DB_NAME")
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+DATABASE_URL = os.environ.get("DATABASE_URL")
+TEST_DB_NAME = os.environ.get("TEST_DB_NAME")
+TEST_DB_USER = os.environ.get("TEST_DB_USER")
+TEST_DB_PASSWORD = os.environ.get("TEST_DB_PASSWORD")
+TEST_DATABASE_URL = os.environ.get("TEST_DATABASE_URL")
+
+AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
+ALGORITHMS = os.environ.get("ALGORITHMS")
+API_AUDIENCE = os.environ.get("API_AUDIENCE")
+AUTH0_CALLBACK_URL = os.environ.get("AUTH0_CALLBACK_URL")
+AUTH0_CLIENT_ID = os.environ.get("AUTH0_CLIENT_ID")
+PRODUCER_TOKEN = os.environ.get("MANAGER_TOKEN")
+DIRECTOR_TOKEN = os.environ.get("DIRECTOR_TOKEN")
+ASSISTANT_TOKEN = os.environ.get("ASSISTANT_TOKEN")
