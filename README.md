@@ -1,4 +1,6 @@
-## Getting Started
+## Hosted URL
+https://capstone-project-deployment.onrender.com
+## Getting Started Locally
 
 ### Installing Dependencies
 
@@ -20,7 +22,7 @@ source env/bin/activate # to activate the environment
 Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
