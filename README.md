@@ -47,12 +47,24 @@ The `--reload` flag will detect file changes and restart the server automaticall
 # API Reference
 ## Error Handling
 
+### Unauthorized
+``` json
+    "success": False, 
+    "error": 401, 
+    "message": "unauthorised"
+```
+### Permission not found
+``` json
+    "success": False, 
+    "error": 403, 
+    "message": "permission not found"
+```
 ### Not Found
 ```json
 {
     "success": "False",
     "error": 404, 
-    "message": "resource found"
+    "message": "resource not found"
 }
 ```
 ### Method not allowed
@@ -66,7 +78,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
 ### Unprocessable entity
 ```json
 {
-  "success": False,
+  "success": "False",
   "error": 422,
   "message": "unprocessable entity"
 }
@@ -106,7 +118,6 @@ The `--reload` flag will detect file changes and restart the server automaticall
        "name": "Bella Ramsey",
         "age": 20,
         "gender": "non-binary" 
-    }
     }],
     "number of actors": 2, 
     "success": true
