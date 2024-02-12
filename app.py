@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, abort, jsonify
+from flask import Flask, request, abort, jsonify, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_utils import database_exists, create_database
 from flask_cors import CORS
@@ -36,8 +36,11 @@ def create_app():
     @app.route('/')
     def home_page():
         return("Hello!")
+    
+    @app.route('/login', methods=['GET'])
+    def login():
+        return(redirect(location=LOGIN_LINK))
         
-
     @app.route('/actors', methods=['GET'])
     @requires_auth('get:actors')
     def get_actors(payload):
