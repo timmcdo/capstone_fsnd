@@ -1,5 +1,9 @@
 ## Hosted URL
 https://capstone-project-deployment.onrender.com
+
+## Generating JWTs
+Head to https://capstone-project-deployment.onrender.com/login where you will be re-directed to an Auth0 authentication page. 
+
 ## Getting Started Locally
 
 ### Installing Dependencies
@@ -27,7 +31,7 @@ pip3 install -r requirements.txt
 
 This will install all of the required packages we selected within the `requirements.txt` file.
 
-## Running the server
+## Running the local server
 
 From within the `./src` directory first ensure you are working using your created virtual environment.
 
@@ -38,7 +42,7 @@ export FLASK_APP=app.py;
 export FLASK_DEBUG=True;
 ```
 
-To run the server, execute:
+To run the local server, execute:
 
 ```bash
 flask run --reload
