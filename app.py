@@ -35,7 +35,7 @@ def create_app():
 
     @app.route('/')
     def home_page():
-        return("Hello!")
+        return("Hello! Navigate to /login to generate a JWT")
     
     @app.route('/login', methods=['GET'])
     def login():

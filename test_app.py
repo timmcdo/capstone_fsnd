@@ -105,22 +105,22 @@ class CastingTestCase(unittest.TestCase):
         self.assertEqual(data["success"], True)
         self.assertEqual(data["new movie"]["title"], "The Wolf of Wall Street")
 
-    # def test_delete_actor(self):
-    #     res = self.client().delete("/actors/2", headers=generate_auth_header(DIRECTOR_TOKEN))
-    #     data = json.loads(res.data)
+    def test_delete_actor(self):
+        res = self.client().delete("/actors/2", headers=generate_auth_header(DIRECTOR_TOKEN))
+        data = json.loads(res.data)
 
-    #     self.assertEqual(res.status_code, 200)
-    #     self.assertTrue(data['success'])
-    #     self.assertEqual(data['deleted'], "Kate Winslet")
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(data['success'])
+        self.assertEqual(data['deleted'], "Kate Winslet")
 
 
-    # def test_delete_movie(self):
-    #     res = self.client().delete("/movies/2", headers=generate_auth_header(PRODUCER_TOKEN))
-    #     data = json.loads(res.data)
+    def test_delete_movie(self):
+        res = self.client().delete("/movies/2", headers=generate_auth_header(PRODUCER_TOKEN))
+        data = json.loads(res.data)
 
-    #     self.assertEqual(res.status_code, 200)
-    #     self.assertTrue(data['success'])
-    #     self.assertEqual(data['deleted'], "Movie The Wolf of Wall Street deleted!")
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(data['success'])
+        self.assertEqual(data['deleted'], "Movie The Wolf of Wall Street deleted!")
 
     def test_edit_actor(self):
         res = self.client().patch("/actors/1", headers=generate_auth_header(DIRECTOR_TOKEN), json=self.edit_actor)

@@ -27,9 +27,16 @@ def setup_db(app, database_path=database_path):
 def db_drop_and_create_all():
     db.drop_all()
     db.create_all()
-    movie = Movie(
-        title='Titanic'
+    actor = Actor(
+        name='Leonardo DiCaprio',
+        age=49,
+        gender='male'
     )
+    actor.insert()
+    movie = Movie(
+        title='Titanic',
+        release_date='17 December 1999'
+        )
     movie.insert()
 
 class Movie(db.Model):
